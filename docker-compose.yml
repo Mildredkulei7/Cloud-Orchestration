@@ -28,6 +28,7 @@ services:
   mongo:
     image: mongo
     container_name: mongodb
+    env_file: ./.env
     ports:
       - '27017:27017'
     environment:
