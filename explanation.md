@@ -23,12 +23,17 @@ Ochestration of yolo app using google kubernetes Engine
 
 # Steps
 ~ login to your google cloud shell, use your google account and create a project to work on.
+
 ~ select your prefered region and zone
+
 ~ Go to the root of your project and create the following files, all under one folder namely "manifests"
+
     ~client.yml
     ~backend.yml
     ~mongodb.yml
+
 ~ to create aech service , run the following command
+
     ~kubectl apply -f client.yaml
     ~kubectl apply -f backend.yaml
     ~kubectl apply -f mongodb.yaml
