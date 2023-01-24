@@ -21,7 +21,6 @@ kind: Deployment
 metadata:
   name: web
 spec:
-  serviceName: "client"
   replicas: 1
   selector:
     matchLabels:
