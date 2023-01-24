@@ -31,7 +31,7 @@ spec:
         app: backend
     spec:
       containers:
-      - name: yolo_api
+      - name: backend
         image: mildredkulei/yoloapi
         ports:
         - containerPort: 8001
