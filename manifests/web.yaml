@@ -44,7 +44,7 @@ metadata:
   name: web
 spec:
   serviceName: "client"
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
       app: client
@@ -78,7 +78,7 @@ metadata:
   name: web-backend
 spec:
   serviceName: "backend"
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
       app: backend
@@ -91,7 +91,7 @@ spec:
       - name: yolo_api
         image: mildredkulei/yoloapi
         ports:
-        - containerPort: 8000
+        - containerPort: 8001
           name: web
         volumeMounts:
         - name: www
