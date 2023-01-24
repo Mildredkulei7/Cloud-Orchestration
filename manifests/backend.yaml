@@ -13,10 +13,7 @@ spec:
   selector:
     app: backend
 
-  sessionAffinity: None
-  type: NodePort
-status:
-  loadBalancer: {}
+
 
 ---
 apiVersion: apps/v1
@@ -25,7 +22,7 @@ metadata:
   name: web-backend
 spec:
   serviceName: "backend"
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: backend
