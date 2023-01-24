@@ -31,10 +31,6 @@ spec:
       containers:
       - name: mongodb
         image: mildredkulei/mongo
-        command:
-          - mongod
-          - "--replSet"
-          - rs0
         ports:
         - containerPort: 27017
         volumeMounts:
