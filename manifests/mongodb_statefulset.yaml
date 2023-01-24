@@ -28,6 +28,8 @@ spec:
   volumeClaimTemplates:
   - metadata:
       name: mongodb-data
+      annotations:
+        volume.beta.kubernetes.io/storage-class: "standard"
     spec:
       accessModes: [ "ReadWriteOnce" ]
       resources:
