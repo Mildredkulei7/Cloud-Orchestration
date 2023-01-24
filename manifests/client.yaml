@@ -31,7 +31,7 @@ spec:
         app: client
     spec:
       containers:
-      - name: yolo_web
+      - name: client
         image: mildredkulei/yoloweb
         ports:
         - containerPort: 8000
