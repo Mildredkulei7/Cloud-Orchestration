@@ -1,0 +1,53 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: backend
+  name: web-backend
+  namespace: default
+spec:
+  ports:
+  - port: 8001
+    protocol: TCP
+    targetPort: 8001
+  selector:
+    app: backend
+
+  sessionAffinity: None
+  type: NodePort
+status:
+  loadBalancer: {}
+
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: web-backend
+spec:
+  serviceName: "backend"
+  replicas: 3
+  selector:
+    matchLabels:
+      app: backend
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec:
+      containers:
+      - name: yolo_api
+        image: mildredkulei/yoloapi
+        ports:
+        - containerPort: 8001
+          name: web
+        volumeMounts:
+        - name: www
+          mountPath: /usr/share/nginx/html
+  volumeClaimTemplates:
+  - metadata:
+      name: www
+    spec:
+      accessModes: [ "ReadWriteOnce" ]
+      resources:
+        requests:
+          storage: 1Gi
