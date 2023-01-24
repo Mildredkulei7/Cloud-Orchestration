@@ -21,7 +21,6 @@ kind: Deployment
 metadata:
   name: web-backend
 spec:
-  serviceName: "backend"
   replicas: 1
   selector:
     matchLabels:
