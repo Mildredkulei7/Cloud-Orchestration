@@ -12,11 +12,8 @@ spec:
     targetPort: 8000
   selector:
     app: client
-  sessionAffinity: None
-  type: NodePort
-status:
-  loadBalancer: {}  
 
+    
 ---
 
 apiVersion: apps/v1
