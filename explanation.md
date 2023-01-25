@@ -48,4 +48,6 @@ Front-end service:
      kubectl expose deploy web --type=LoadBalancer --port=8000 --target-port=8000 --name=clientsvc
 
 Backend:
+
     kubectl expose deploy web --type=LoadBalancer --port=8001 --target-port=8001 --name=clientsvc
+
