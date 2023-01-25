@@ -71,8 +71,8 @@ NAME                           READY   STATUS             RESTARTS   AGE
 web-56478f4876-5l4kg           0/1     ImagePullBackOff   0          73m
 web-backend-6f96fc874c-zxb75   0/1     ErrImagePull       0          73m
 
-Front_end service:   34.118.243.70 
+Front_end service:   34.118.243.70:8000
 
-Backend_service:  34.125.166.108
+Backend_service:  34.125.166.108:8001
 
 
