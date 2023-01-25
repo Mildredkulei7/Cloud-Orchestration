@@ -33,6 +33,7 @@ spec:
         image: mildredkulei/mongo
         ports:
         - containerPort: 27017
+          name: mongodb
         volumeMounts:
         - name: mongodb-data
           mountPath: "/data/db"
