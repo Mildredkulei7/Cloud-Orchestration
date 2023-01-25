@@ -51,3 +51,28 @@ Backend:
 
     kubectl expose deploy web --type=LoadBalancer --port=8001 --target-port=8001 --name=clientsvc
 
+The services created as below;
+
+NAME          TYPE           CLUSTER-IP    EXTERNAL-IP      PORT(S)          AGE
+backendsvc    LoadBalancer   10.84.0.61    34.125.166.108   8001:31461/TCP   15m
+clientsvc     LoadBalancer   10.84.14.36   34.118.243.70    8000:30578/TCP   23m
+kubernetes    ClusterIP      10.84.0.1     <none>           443/TCP          88m
+
+We got 3 nodes created;
+
+NAME                                          STATUS   ROLES    AGE   VERSION
+gke-yolo-cluster-default-pool-973eb09d-0k2k   Ready    <none>   85m   v1.24.8-gke.2000
+gke-yolo-cluster-default-pool-973eb09d-7vm6   Ready    <none>   85m   v1.24.8-gke.2000
+gke-yolo-cluster-default-pool-973eb09d-n4tz   Ready    <none>   85m   v1.24.8-gke.2000
+
+The 2 pods created:
+
+NAME                           READY   STATUS             RESTARTS   AGE
+web-56478f4876-5l4kg           0/1     ImagePullBackOff   0          73m
+web-backend-6f96fc874c-zxb75   0/1     ErrImagePull       0          73m
+
+Front_end service:   34.118.243.70 
+
+Backend_service:  34.125.166.108
+
+
