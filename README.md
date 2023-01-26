@@ -1,3 +1,16 @@
+
+There is a detailed eplanation on container ochestration using GKE on explanation.md file.
+
+Site Link:
+
+Front_end service: http://34.118.243.70:8000/
+
+Backend_service:  http://34.125.166.108:8001/
+
+
+
+
+
 # Requirements
 Make sure that you have the following installed:
 - [node](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-18-04) 
@@ -58,3 +71,9 @@ create a cluster
 Confirm that both containers plus the mongodb are on the same network
 7. created account on dockerhub
 pushed the images there; https://hub.docker.com/repository/docker/mildredkulei/yolomy-app
+
+link to dockerhub images
+
+frontend image: https://hub.docker.com/layers/mildredkulei/yolomy-app/yoloweb
+
+backend image: https://hub.docker.com/layers/mildredkulei/yolomy-app/yoloapi
