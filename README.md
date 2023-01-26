@@ -8,9 +8,7 @@ Front_end service: http://34.118.243.70:8000/
 Backend_service:  http://34.125.166.108:8001/
 
 
-
-
-`
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ## Requirements
 Make sure that you have the following installed:
 - [node](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-18-04) 
@@ -78,4 +76,3 @@ frontend image: https://hub.docker.com/layers/mildredkulei/yolomy-app/yoloweb
 
 backend image: https://hub.docker.com/layers/mildredkulei/yolomy-app/yoloapi 
 
-`
