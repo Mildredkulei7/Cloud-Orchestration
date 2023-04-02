@@ -32,8 +32,9 @@ services:
     ports:
       - '27017:27017'
     environment:
-      MONGO_INITDB_ROOT_USERNAME: mildredkulei
-      MONGO_INITDB_ROOT_PASSWORD: kossy123$
+      - DB_HOST=mongo
+      - DB_USER=admin
+      - DB_PASSWORD=password
     volumes:
       - database:/data/db
     networks:
